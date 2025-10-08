@@ -17,8 +17,8 @@ class Lotto:
         return lottoZahlen
     
     def lotto_statistik(self, lotto: list[int], previos: dict) -> dict:
-        stats: dict = previos.copy()  # Create a copy to avoid modifying the original
+        stats: dict = previos.copy()
         for num in lotto:
             if num in stats:
-                stats[num] += 1  # Increment if number exists
+                stats[num] += 1
         return stats
