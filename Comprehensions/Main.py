@@ -1,6 +1,6 @@
 # Übungsaufgaben für Comprehensions
 # List-, Set- und Dict-Comprehensions mit verschiedenen Bedingungen
-
+import string as str
 """
 LIST COMPREHENSION SYNTAX:
 
@@ -24,7 +24,6 @@ Merke:
 
 def comprehension_exercises():
     print("=== COMPREHENSION ÜBUNGEN ===\n")
-    
     # Beispieldaten für die Übungen
     numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     words = ["python", "java", "javascript", "go", "rust", "c++", "swift"]
@@ -35,6 +34,12 @@ def comprehension_exercises():
         {"name": "David", "age": 16, "city": "Linz"},
         {"name": "Eva", "age": 22, "city": "Salzburg"}
     ]
+    
+    #Hausuebung: 
+    #Dictonary für alle Buchstaben in Alphabet in nummerieren
+    alphaB = str.ascii_lowercase
+    alpha = {alphaB[i]: i+1 for i in range(26)}
+    print(f"Alphabet-Dictionary: {alpha}\n")
     
     print("--- AUFGABE 1: LIST COMPREHENSIONS ---")
     print("a) Ohne Bedingung: Quadriere alle Zahlen von 1-10")
