@@ -1,9 +1,14 @@
 import random
+import unittest
 from random import randint
 
+class TestPoker(unittest.TestCase):
+    def test_(self):
+        self.assertTrue(colour())
+        
 def main():
     cards = {i for i in range(52)}
-    print(search(cards, 100000))
+    print(search(cards, 1000000))
 
 
 def search(cards, size):
@@ -46,13 +51,10 @@ def search(cards, size):
                         tree = 7
                 case 3:
                     poker_hands["royal_flush"] += 1
-                    break
                 case 4:
                     poker_hands["straight_flush"] += 1
-                    break
                 case 5:
                     poker_hands["flush"] += 1
-                    break
                 case 6:
                     if zweiPaare(mycards.copy()):
                         tree = 8
@@ -71,25 +73,18 @@ def search(cards, size):
                         tree = 13
                 case 8:
                     poker_hands["two_pair"] += 1
-                    break
                 case 9:
                     poker_hands["three_of_a_kind"] += 1
-                    break
                 case 10:
                     poker_hands["four_of_a_kind"] += 1
-                    break
                 case 11:
                     poker_hands["full_house"] += 1
-                    break
                 case 12:
                     poker_hands["straight"] += 1
-                    break
                 case 13:
                     poker_hands["high_card"] += 1
-                    break
                 case 14:
                     poker_hands["one_pair"] += 1
-                    break
 
     # convert counts to percentages
     for key in poker_hands:
