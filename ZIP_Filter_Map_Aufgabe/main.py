@@ -16,7 +16,7 @@ def main ():
     filtered = filter(lambda person: person[1] >= 18 and person[2] >= 80, combined)
     result = dict(map(lambda person: {"name": person[0], "age": person[1], "score": person[2]}, filtered))
     
-    print(result)
+    print(result)            
 
 if __name__ == "__main__":
     main()
