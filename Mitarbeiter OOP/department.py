@@ -19,7 +19,6 @@ class Department:
     def set_manager(self, manager: DepartmentHead) -> None:
         if self._manager is not None and self._manager is not manager:
             raise ValueError("Diese Abteilung hat bereits einen Abteilungsleiter.")
-
         self._manager = manager
         if manager not in self._employees:
             self._employees.append(manager)

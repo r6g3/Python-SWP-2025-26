@@ -19,15 +19,15 @@ def build_sample_company() -> Company:
     company.add_department(hr)
     company.add_department(sales)
 
-    DepartmentHead("Anna", "Müller", Gender.FEMALE, it)
-    DepartmentHead("Peter", "Maier", Gender.MALE, hr)
+    DepartmentHead("David", "Müller", Gender.MALE, it)
+    DepartmentHead("Peter", "Quickner", Gender.MALE, hr)
     DepartmentHead("Julia", "Schmidt", Gender.FEMALE, sales)
 
     Employee("Markus", "Klein", Gender.MALE, it)
-    Employee("Sabine", "Huber", Gender.FEMALE, it)
-    Employee("Thomas", "Gruber", Gender.MALE, hr)
+    Employee("Iris", "Huber", Gender.FEMALE, it)
+    Employee("Thomas", "Mann", Gender.MALE, hr)
     Employee("Maria", "Fischer", Gender.FEMALE, sales)
-    Employee("Lukas", "Weber", Gender.MALE, sales)
+    Employee("Lukas", "Fitz", Gender.MALE, sales)
 
     return company
 
