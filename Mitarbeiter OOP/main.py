@@ -7,7 +7,7 @@ from gender import Gender
 
 
 def build_sample_company() -> Company:
-    """Erzeugt ein Beispiel-Firmenobjekt mit Abteilungen und Mitarbeitern."""
+    
 
     company = Company("Beispielfirma GmbH")
 

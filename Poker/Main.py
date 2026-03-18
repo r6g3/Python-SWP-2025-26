@@ -1,4 +1,5 @@
 import random
+import time
 import unittest
 from random import randint
 
@@ -8,8 +9,18 @@ class TestPoker(unittest.TestCase):
         
 def main():
     cards = {i for i in range(52)}
-    print(search(cards, 1000000))
+    result = decorator(search(cards, 10000))
+    print(result)
 
+
+def decorator(func):
+    def wrapper(*args, **kwargs):
+        start = time.perf_counter()
+        result = func(*args, **kwargs)
+        end = time.perf_counter()
+        print(f"Runtime: {end - start:.4f} Sekunden")
+        return result
+    return wrapper
 
 def search(cards, size):
     poker_hands = {
